@@ -1098,6 +1098,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CueBall
       objectReference: {fileID: 0}
+    - target: {fileID: 9017385108538090268, guid: aaab272632707374195b512b1401052c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
