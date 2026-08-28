@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 public enum BallColor
@@ -89,5 +90,10 @@ public class Ball : MonoBehaviour, IPointerClickHandler
                 rd.material.color = Color.pink;
                 break;
         }
+    }
+
+    internal void SetColorAndPoint(BallColor col)
+    {
+        throw new NotImplementedException();
     }
 }
