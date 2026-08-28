@@ -12,7 +12,7 @@ public class Hole : MonoBehaviour
         {
             if (ball.Point == 0)
             {
-                GameManager.instance.ShowString($"son why u do EnsureThat to my ball");
+                GameManager.instance.ShowString($"ERM.. WRONG WAY ");
                 Time.timeScale = 0;
             }
             else

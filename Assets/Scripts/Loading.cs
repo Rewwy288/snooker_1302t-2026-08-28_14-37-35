@@ -32,7 +32,7 @@ public class Loading : MonoBehaviour
 
     private IEnumerator LoadNewScene()
     {
-        AsyncOperation oper = SceneManager.LoadSceneAsync("Scene01");
+        AsyncOperation oper = SceneManager.LoadSceneAsync("Mainscene");
         while (!oper.isDone)
         {
             slider.value = oper.progress / 0.9f;

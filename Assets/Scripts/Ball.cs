@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 public enum BallColor
@@ -26,9 +25,6 @@ public class Ball : MonoBehaviour, IPointerClickHandler
     [SerializeField]
     private MeshRenderer rd;
 
-    [SerializeField]
-    private GameManager gameManager; // drag reference in inspector or assign in code
-
     void Awake()
     {
         rd = GetComponent<MeshRenderer>();
@@ -39,7 +35,8 @@ public class Ball : MonoBehaviour, IPointerClickHandler
     {
         Debug.Log(point);
         Destroy(gameObject);
-        gameManager.PlayerScore += point; // instance member on the referenced object
+        GameManager.instance.PlayerScore += point;
+
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -90,10 +87,5 @@ public class Ball : MonoBehaviour, IPointerClickHandler
                 rd.material.color = Color.pink;
                 break;
         }
-    }
-
-    internal void SetColorAndPoint(BallColor col)
-    {
-        throw new NotImplementedException();
     }
 }
